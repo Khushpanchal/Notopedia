@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Notopedia</string>
+    <string name="titleBar">NOTOPEDIA</string>
+    <string name="plus">+</string>
+    <string name="title">TITLE</string>
+    <string name="description">DESCRIPTION</string>
+    <string name="save">SAVE</string>
+    <string name="add">ADD</string>
+    <string name="unsaved_changes_dialog_msg">Discard your changes</string>
+    <string name="discard">Discard</string>
+    <string name="keep_editing">Keep Editing</string>
+    <string name="delete_dialog_msg">Delete this note?</string>
+    <string name="delete">DELETE</string>
+    <string name="cancel">CANCEL</string>
+</resources>
