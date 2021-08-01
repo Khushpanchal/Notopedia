@@ -13,7 +13,7 @@ import com.example.notopedia.data.Contract.NoteEntry;
 public class NoteAdapter extends CursorAdapter {
 
     public NoteAdapter(Context context, Cursor c) {
-        super(context, c, 0 /* flags */);
+        super(context, c, 0 );
     }
 
     @Override
@@ -24,9 +24,9 @@ public class NoteAdapter extends CursorAdapter {
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
 
-        TextView nameTextView = (TextView) view.findViewById(R.id.title_id);
-        int nameColumnIndex = cursor.getColumnIndex(NoteEntry.COLUMN_NOTE_TITLE);
-        String petName = cursor.getString(nameColumnIndex);
-        nameTextView.setText(petName);
+        TextView titleTextView =  view.findViewById(R.id.title_id);
+        int titleColumnIndex = cursor.getColumnIndex(NoteEntry.COLUMN_NOTE_TITLE);
+        String petName = cursor.getString(titleColumnIndex);
+        titleTextView.setText(petName);
     }
 }

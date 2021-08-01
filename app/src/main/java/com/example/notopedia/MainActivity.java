@@ -62,12 +62,7 @@ public class MainActivity extends AppCompatActivity implements
                 NoteEntry._ID,
                 NoteEntry.COLUMN_NOTE_TITLE};
 
-        return new CursorLoader(this,   // Parent activity context
-                NoteEntry.CONTENT_URI,   // Provider content URI to query
-                projection,             // Columns to include in the resulting Cursor
-                null,                   // No selection clause
-                null,                   // No selection arguments
-                null);                  // Default sort order
+        return new CursorLoader(this, NoteEntry.CONTENT_URI, projection, null, null, null);
     }
     
 

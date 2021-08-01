@@ -8,7 +8,6 @@ import com.example.notopedia.data.Contract.NoteEntry;
 
 public class NoteDbHelper extends SQLiteOpenHelper {
 
-    public static final String LOG_TAG = NoteDbHelper.class.getSimpleName();
     private static final String DATABASE_NAME = "shelter.db";
     private static final int DATABASE_VERSION = 1;
 
@@ -17,7 +16,7 @@ public class NoteDbHelper extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        // Create a String that contains the SQL statement to create the pets table
+
         String SQL_CREATE_PETS_TABLE =  "CREATE TABLE " + NoteEntry.TABLE_NAME + " ("
                 + NoteEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + NoteEntry.COLUMN_NOTE_TITLE + " TEXT NOT NULL, "

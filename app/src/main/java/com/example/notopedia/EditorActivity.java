@@ -68,12 +68,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
                 NoteEntry.COLUMN_NOTE_TITLE,
                 NoteEntry.COLUMN_NOTE_DESCRIPTION};
 
-        return new CursorLoader(this,   // Parent activity context
-                mCurrentNoteUri,         // Query the content URI for the current pet
-                projection,             // Columns to include in the resulting Cursor
-                null,                   // No selection clause
-                null,                   // No selection arguments
-                null);
+        return new CursorLoader(this, mCurrentNoteUri, projection, null, null, null);
     }
 
     @Override
@@ -209,10 +204,10 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
             int rowsDeleted = getContentResolver().delete(mCurrentNoteUri, null, null);
 
             if (rowsDeleted == 0) {
-                Toast.makeText(this, "Deletetion failed",
+                Toast.makeText(this, "Deletetion Failed",
                         Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(this, "Successfully deleted",
+                Toast.makeText(this, "Successfully Deleted",
                         Toast.LENGTH_SHORT).show();
             }
         }
@@ -240,7 +235,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
                 Toast.makeText(this, "Inseertion Failed",
                         Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(this, "Successfully inserted",
+                Toast.makeText(this, "Successfully Inserted",
                         Toast.LENGTH_SHORT).show();
             }
         } else {
