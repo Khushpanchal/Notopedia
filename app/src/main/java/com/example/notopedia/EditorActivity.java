@@ -232,7 +232,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
         if (mCurrentNoteUri == null) {
             Uri newUri = getContentResolver().insert(NoteEntry.CONTENT_URI, values);
             if (newUri == null) {
-                Toast.makeText(this, "Inseertion Failed",
+                Toast.makeText(this, "Insertion Failed",
                         Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "Successfully Inserted",
